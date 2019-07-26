@@ -1,3 +1,3 @@
 # Interpreter made with golang
 
-## this project is lead by "Writing An Interpreter In Go"(https://interpreterbook.com/)
+## this project is lead along "Writing An Interpreter In Go"(https://interpreterbook.com/)
