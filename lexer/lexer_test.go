@@ -23,10 +23,10 @@ func TestNextToken(t *testing.T) {
     } else {
       return false
     }
-	`
 
-	// 10 == 10;
-	// 10 != 9;
+		10 == 10;
+		10 != 9;
+	`
 	tests := []struct {
 		expectedType    token.TokenType
 		expectedLiteral string
