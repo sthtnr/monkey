@@ -1,6 +1,8 @@
 package ast
 
-import "go/token"
+import (
+	"monkey/token"
+)
 
 type Node interface {
 	TokenLiteral() string
@@ -41,10 +43,10 @@ func (ls *LetStatement) TokenLiteral() string {
 
 type Identifier struct {
 	Token token.Token // token.IDENT トークン
-	value string
+	Value string
 }
 
-func (i *Identifier) expressionNode()  {
+func (i *Identifier) expressionNode() {}
 func (i *Identifier) TokenLiteral() string {
 	return i.Token.Literal
 }
