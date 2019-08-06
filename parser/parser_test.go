@@ -271,6 +271,7 @@ func TestOperatorPrecedenceParsing(t *testing.T) {
 		input    string
 		expected string
 	}{
+		{"-1 * 2 + 3", "(((-1) * 2) + 3)"},
 		{
 			"-a * b",
 			"((-a) * b)",
