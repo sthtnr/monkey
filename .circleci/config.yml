@@ -1,0 +1,19 @@
+version: 2.1
+
+executors:
+  go:
+    docker:
+      - image: circleci/golang:1.12
+        environment: GO111MODULE: 'on'
+
+commands:
+  test:
+    - run:
+      name: Run test
+      command: go test ./...
+
+jobs:
+  build:
+    executor: go
+    steps:
+      - test
