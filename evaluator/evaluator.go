@@ -1,8 +1,8 @@
 package evaluator
 
 import (
-	"monkey/ast"
-	"monkey/object"
+	"github.com/sthtnr/monkey/ast"
+	"github.com/sthtnr/monkey/object"
 )
 
 var (

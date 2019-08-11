@@ -2,8 +2,9 @@ package ast
 
 import (
 	"bytes"
-	"monkey/token"
 	"strings"
+
+	"github.com/sthtnr/monkey/token"
 )
 
 func (p *Program) String() string {

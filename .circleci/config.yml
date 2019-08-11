@@ -1,21 +1,10 @@
-version: 2.1
-
-executors:
-  go:
-    docker:
-      - image: circleci/golang:1.12
-
-commands:
-  test:
-    steps:
-      - run:
-          name: Run test
-          command: go test ./parser
+version: 2
 
 jobs:
   build:
+    docker:
+      - image: circleci/golang:1.12
     working_directory: /go/src/github.com/sthtnr/monkey
-    executor: go
     steps:
       - checkout
-      - test
+      - run: go test ./...
