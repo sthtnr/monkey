@@ -12,7 +12,7 @@ commands:
     steps:
       - run:
           name: Run test
-          command: go test ./...
+          command: go test ./parser
 
 jobs:
   build:
