@@ -9,9 +9,10 @@ executors:
 
 commands:
   test:
-    - run:
-      name: Run test
-      command: go test ./...
+    steps:
+      - run:
+          name: Run test
+          command: go test ./...
 
 jobs:
   build:
