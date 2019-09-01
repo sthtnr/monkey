@@ -8,6 +8,8 @@ import (
 	"github.com/sthtnr/monkey/ast"
 )
 
+type BuiltinFunction func(args ...Object) Object
+
 type ObjectType string
 
 const (
@@ -18,6 +20,7 @@ const (
 	ERROR_OBJ        = "ERROR"
 	FUNCTION_OBJ     = "FUNCTION"
 	STRING_OBJ       = "STRING"
+	BUITIN_OBJ       = "BUITIN"
 )
 
 type Object interface {
@@ -121,4 +124,16 @@ func (s *String) Type() ObjectType {
 
 func (s *String) Inspect() string {
 	return s.Value
+}
+
+type Builtin struct {
+	Fn BuiltinFunction
+}
+
+func (b *Builtin) Type() ObjectType {
+	return BUITIN_OBJ
+}
+
+func (b *Builtin) Inspect() string {
+	return "builtin function"
 }
